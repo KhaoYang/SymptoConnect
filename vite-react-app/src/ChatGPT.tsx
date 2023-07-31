@@ -4,12 +4,13 @@ import {
   Configuration,
   OpenAIApi,
 } from "openai";
+import "./ChatGPT.css";
 
 export const ChatGPT: React.FC = () => {
   const [prompt, setPrompt] = React.useState<string | undefined>("");
   const [response, setResponse] = React.useState<string | undefined>("");
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "APIKEY",
   });
   const myOpenAi = new OpenAIApi(configuration);
   const chatGptMessages = [
@@ -36,10 +37,13 @@ export const ChatGPT: React.FC = () => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className="submitButton" type="submit">
+          Submit
+        </button>
       </form>
       {/* If there's no response then don't show the element */}
-      {!!response && <div>{response}</div>}
+
+      {!!response && <div className="responseText">{response}</div>}
     </>
   );
 };
