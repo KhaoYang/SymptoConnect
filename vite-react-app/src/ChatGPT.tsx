@@ -10,6 +10,7 @@ export const ChatGPT: React.FC = () => {
   const [prompt, setPrompt] = React.useState<string | undefined>("");
   const [response, setResponse] = React.useState<string | undefined>("");
   const configuration = new Configuration({
+    //Need to input personal API key if you want GPT to work
     apiKey: "APIKEY",
   });
   const myOpenAi = new OpenAIApi(configuration);
