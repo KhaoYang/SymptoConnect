@@ -188,7 +188,10 @@ function App() {
                 <td>{item.timestamp}</td>
                 <td>{item.image && <img src={item.image} alt="Captured" />}</td>
                 <td>
-                  <button onClick={(e) => deleteButton(index, e)}>
+                  <button
+                    className="deleteButton ripple"
+                    onClick={(e) => deleteButton(index, e)}
+                  >
                     Delete
                   </button>
                 </td>

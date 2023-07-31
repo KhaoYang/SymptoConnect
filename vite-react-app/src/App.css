@@ -245,3 +245,10 @@ tr:nth-child(even) {
   border: 1px solid black;
   margin-top: 5px;
 }
+.deleteButton {
+  width: 100%;
+  background-color: #ffcc99;
+}
+.deleteButton:hover {
+  opacity: 0.75;
+}
